@@ -1,11 +1,17 @@
 @charset "utf-8";
-/*  */
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap");
+/* 공통 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline-style: none;
   scroll-behavior: smooth;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  font-family: "Noto Sans KR", sans-serif;
 }
 /* header */
 .header {
@@ -34,11 +40,52 @@ a {
   padding-top: 20px;
 }
 .header_li a {
-  color: #333;
+  color: #434343;
   font-weight: 600;
 }
 .header_li a:hover {
   color: #0084e2;
+}
+/* subemenu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-right: 50px;
+}
+.dropbtn {
+  border-radius: 4px;
+  font-weight: 400;
+  color: rgb(37, 37, 37);
+  padding: 12px;
+  width: 200px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 999; /*다른 요소들보다 앞에 배치*/
+  font-weight: 400;
+  background-color: #ffffff;
+  min-width: 200px;
+  width: 100%;
+}
+.dropdown-content a {
+  display: block;
+  color: #575757;
+  font-size: 14px;
+  padding: 12px 20px;
+  min-width: 180px;
+  width: 100%;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  width: 100%;
+  min-width: 200px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 /* swiper */
 .swiper {
@@ -72,7 +119,7 @@ a {
 .contact_line {
   width: 70px;
   height: 7px;
-  background-color: #333;
+  background-color: #434343;
   margin: 70px;
 }
 .contact_text {
@@ -84,16 +131,22 @@ a {
 .contact h2 {
   font-size: 60px;
   font-weight: 600;
-  letter-spacing: -0.5px;
+  color: #434343;
 }
 .contact h2:nth-child(2) {
   font-size: 80px;
+  font-weight: 700;
   letter-spacing: -1px;
   color: red;
 }
+.contact h2:nth-child(3) {
+  font-weight: 800;
+  letter-spacing: -2px;
+}
 .contact h2:nth-child(4) {
   font-size: 35px;
-  padding-top: 10px;
+  padding-top: 15px;
+  letter-spacing: 1px;
 }
 @keyframes blink-effect {
   50% {
@@ -118,6 +171,11 @@ a {
 .product_text h2 {
   font-size: 50px;
   padding-bottom: 10px;
+  color: #434343;
+}
+.product_text p {
+  color: #7c7c7c;
+  font-weight: 600;
 }
 .product_img {
   padding-top: 40px;
@@ -147,7 +205,7 @@ a {
 .footer {
   margin-top: 80px;
   color: #d4d4d4;
-  background-color: #333;
+  background-color: #3d3d3d;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -160,8 +218,11 @@ a {
 .footer b {
   font-size: 15px;
   color: #ececec;
+  font-weight: 500;
 }
 .footer_twin {
+  max-width: 800px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -179,6 +240,11 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.fa-regular {
+  padding-top: 7px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 .footer_mobile {
   padding-left: 100px;
   display: flex;
@@ -191,4 +257,26 @@ a {
 }
 .footer_mobile a:hover {
   text-decoration: underline;
+}
+.topbutton {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 100px;
+}
+.topbtn {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.topbtn:hover {
+  background-color: #fff;
+  color: #3d3d3d;
 }
